@@ -147,6 +147,12 @@ To reset everything to the beginning, just run `./reset.sh`.
 
 Wake on LAN (WOL) does not work and I will not fix that because it is beyound the scope of this repo. But [zukkie777](https://github.com/zukkie777) who also filed [this issue](https://github.com/boschkundendienst/guacamole-docker-compose/issues/12) fixed it. You can read about it on the [Guacamole mailing list](http://apache-guacamole-general-user-mailing-list.2363388.n4.nabble.com/How-to-docker-composer-for-WOL-td9164.html)
 
+## 
+
 **Disclaimer**
+edit: /etc/netplan/50-cloud-init.yaml 
+routes:
+-to: 10.13.13.0/24 #network wireguard
+via: 172.18.0.2 #ip docker wireguard
 
 Downloading and executing scripts from the internet may harm your computer. Make sure to check the source of the scripts before executing them!
