@@ -1,15 +1,15 @@
-# Guacamole with docker-compose
+# Guacamole con docker-compose
 Esta es una pequeña documentación sobre cómo ejecutar una instancia de **Apache Guacamole (incubando)** totalmente funcional con docker (docker-compose). El objetivo de este proyecto es facilitar la prueba de Guacamole.
 
-## About Guacamole
+## acerca de Guacamole
 Apache Guacamole (en incubación) es una puerta de enlace de escritorio remoto sin cliente. Admite protocolos estándar como VNC, RDP y SSH. Se llama sin cliente porque no se requieren complementos ni software de cliente. Gracias a HTML5, una vez que Guacamole está instalado en un servidor, todo lo que necesita para acceder a sus escritorios es un navegador web.
 
 Es compatible con RDP, SSH, Telnet y VNC y es la puerta de enlace HTML5 más rápida que conozco. Consulta la [página de inicio](https://guacamole.incubator.apache.org/) de los proyectos para obtener más información.
 
-## Prerequisites
+## requisitos previos
 Necesita una instalación **docker** funcional y **docker-compose** ejecutándose en su máquina.
 
-## Quick start
+## Inicio rápido
 Clona el repositorio GIT e inicia guacamole:
 
 ~~~bash
@@ -21,7 +21,7 @@ docker-compose up -d
 
 Su servidor de guacamole ahora debería estar disponible en `https://ip de su servidor: 8443/`. El nombre de usuario predeterminado es `guacadmin` con la contraseña `guacadmin`.
 
-## Details
+## Detalles
 Para comprender algunos detalles, echemos un vistazo más de cerca a partes del archivo `docker-compose.yml`:
 
 ### Networking
@@ -37,6 +37,7 @@ networks:
 ~~~
 
 ### Services
+
 #### guacd
 La siguiente parte de docker-compose.yml creará el servicio guacd. guacd es el corazón de Guacamole que carga dinámicamente soporte para protocolos de escritorio remoto (llamados "complementos de cliente") y los conecta a escritorios remotos según las instrucciones recibidas de la aplicación web. El contenedor se llamará `guacd_compose` basado en la imagen acoplable `guacamole/guacd` conectada a nuestra red `guacnetwork_compose` creada previamente. Además, mapeamos las 2 carpetas locales `./drive` y `./record` en el contenedor. Podemos usarlos más tarde para mapear unidades de usuario y almacenar grabaciones de sesiones.
 
