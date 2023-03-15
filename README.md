@@ -149,6 +149,8 @@ Wake on LAN (WOL) does not work and I will not fix that because it is beyound th
 
 Wake on LAN (WOL) no funciona y no lo arreglaré porque está fuera del alcance de este repositorio. Pero [zukkie777](https://github.com/zukkie777) que también presentó [este problema](https://github.com/boschkundendienst/guacamole-docker-compose/issues/12) lo solucionó. Puede leer sobre esto en la [lista de correo de Guacamole] (http://apache-guacamole-general-user-mailing-list.2363388.n4.nabble.com/How-to-docker-composer-for-WOL-td9164 .html)
 
+
+##### implementacion y puesta en marcha ######
 ## RUTAS
 edit: /etc/netplan/50-cloud-init.yaml 
 routes:
