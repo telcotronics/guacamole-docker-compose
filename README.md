@@ -161,6 +161,5 @@ via: 172.18.0.2 #ip docker wireguard
 sudo ufw allow 8000/tcp
 
 
-**Disclaimer**
-
-Downloading and executing scripts from the internet may harm your computer. Make sure to check the source of the scripts before executing them!
+**Descargo de responsabilidad**
+Descargar y ejecutar scripts de Internet puede dañar su computadora. ¡Asegúrese de verificar la fuente de los scripts antes de ejecutarlos!
